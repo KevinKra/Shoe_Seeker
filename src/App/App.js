@@ -1,10 +1,18 @@
 import React from "react";
-import "./App.css";
+import "./_App.scss";
+import Order from "../Order/Order";
+import Form from "../Form/Form";
 
 function App() {
   return (
-    <main>
-      <h1>Hello World</h1>
+    <main className="app">
+      <section className="shoe-profile">
+        <h1>Shoe Seeker</h1>
+      </section>
+      <aside>
+        <Order />
+        <Form />
+      </aside>
     </main>
   );
 }
