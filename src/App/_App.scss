@@ -1,0 +1,23 @@
+@import "../styles/variables";
+
+.app {
+  display: flex;
+  border: 1px solid $color1;
+  height: 95vh;
+  justify-content: center;
+  // width: 100%;
+  margin: 0.5rem;
+}
+
+.shoe-profile {
+  border: 1px dashed orange;
+  width: 55vw;
+}
+
+.order-information {
+  border: 1px solid red;
+}
+
+.form {
+  border: 1px solid green;
+}
