@@ -1,4 +1,5 @@
 import React from "react";
+import EditForm from "../Form/Form";
 
 class Form extends React.Component {
   nameRef = React.createRef();
@@ -21,6 +22,16 @@ class Form extends React.Component {
   };
 
   render() {
+    const renderEditForm = () => {
+      if (!this.props.shoes) {
+        return null;
+      } else {
+        Object.keys(this.props.shoes).map(shoe => {
+          return <EditForm />;
+        });
+      }
+    };
+
     return (
       <section className="form">
         <form className="shoe-edit" onSubmit={this.renderShoe}>
@@ -54,6 +65,12 @@ class Form extends React.Component {
         <button onClick={this.props.displayDefaultShoes}>
           Load Default Shoes
         </button>
+        {renderEditForm()}
+        {/* {console.log(Object.keys(this.props.shoes))}
+
+        {Object.keys(this.props.shoes).map(shoe => {
+          return <EditForm />;
+        })} */}
       </section>
     );
   }

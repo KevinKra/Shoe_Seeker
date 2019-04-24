@@ -6,8 +6,16 @@ class Profile extends React.Component {
     return (
       <section className="shoe-profile">
         <ul className="shoes">
+          {/*Very neat*/}
           {Object.keys(this.props.shoes).map(key => {
-            return <Shoe key={key} details={this.props.shoes[key]} />;
+            return (
+              <Shoe
+                key={key}
+                index={key}
+                details={this.props.shoes[key]}
+                addToOrder={this.props.addToOrder}
+              />
+            );
           })}
         </ul>
       </section>

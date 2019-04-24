@@ -11,6 +11,10 @@ class Shoe extends React.Component {
         <img src={image} alt={name} />
         <p>{shown}</p>
         <p>{desc}</p>
+        {/* Notice how arrow function had to be used, couldnt just insert prop */}
+        <button onClick={() => this.props.addToOrder(this.props.index)}>
+          Add to cart
+        </button>
       </li>
     );
   }
