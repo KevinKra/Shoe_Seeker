@@ -9,6 +9,10 @@ body {
   justify-content: center;
   align-items: center;
 }
+img {
+  height: 100px;
+  width: 100px;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

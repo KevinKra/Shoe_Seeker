@@ -2,18 +2,20 @@ import React from "react";
 
 class Shoe extends React.Component {
   render() {
-    const { name, type, desc, image, shown, rating } = this.props.shoes;
+    const { name, type, desc, image, shown, rating } = this.props.details;
     return (
-      <article>
-        <h1>Shoe Seeker</h1>
-        {this.props.shoes.shoe1 ? (
-          <p>{this.props.shoes.shoe1.name}</p>
-        ) : (
-          <p>{this.props.shoes.name}</p>
-        )}
-        <p>{this.props.shoes.name}</p>
-        <img src={this.props.shoes.image} alt="" />
-      </article>
+      <li className="display-shoe">
+        <h3>{name}</h3>
+        <p>{rating}</p>
+        <p>{type}</p>
+        <img src={image} alt={name} />
+        <p>{shown}</p>
+        <p>{desc}</p>
+        {/* Notice how arrow function had to be used, couldnt just insert prop */}
+        <button onClick={() => this.props.addToOrder(this.props.index)}>
+          Add to cart
+        </button>
+      </li>
     );
   }
 }
