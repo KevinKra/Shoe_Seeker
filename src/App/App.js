@@ -3,7 +3,7 @@ import "./_App.scss";
 import Order from "../Order/Order";
 import Form from "../Form/Form";
 import Profile from "../Profile/Profile";
-import shoes from "../sample-shoes";
+import sampleShoes from "../sample-shoes";
 
 class App extends React.Component {
   state = {
@@ -13,8 +13,7 @@ class App extends React.Component {
 
   displayDefaultShoes = e => {
     e.preventDefault();
-    this.setState({ shoes: shoes });
-    console.log("hello");
+    this.setState({ shoes: sampleShoes });
   };
 
   updateShoes = newShoe => {

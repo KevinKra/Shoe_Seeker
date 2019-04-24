@@ -5,7 +5,11 @@ class Profile extends React.Component {
   render() {
     return (
       <section className="shoe-profile">
-        <Shoe shoes={this.props.shoes} />
+        <ul className="shoes">
+          {Object.keys(this.props.shoes).map(key => {
+            return <Shoe key={key} details={this.props.shoes[key]} />;
+          })}
+        </ul>
       </section>
     );
   }

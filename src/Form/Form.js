@@ -51,6 +51,9 @@ class Form extends React.Component {
           />
           <button type="submit">Display Shoes</button>
         </form>
+        <button onClick={this.props.displayDefaultShoes}>
+          Load Default Shoes
+        </button>
       </section>
     );
   }
